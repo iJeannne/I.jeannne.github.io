@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>lab1</title>
+    </head>
+    <body>
+        <label for="fahrenheit">Enter the amount in Fahrenheit:</label>
+        <input id="fahrenheit" type="number" placeholder="Example: 32" />
+        <button id="convert">Convert</button>
+        Result: <p id="result">awaiting input...</p>
+
+        <script>
+            const inputEl = document.getElementById('fahrenheit');
+            const convertButton = document.getElementById('convert');
+            const resultEl = document.getElementById('result');
+            convertButton.addEventListener('click', function() {
+                const fahrenheit = parseInt(inputEl.value);
+                // TODO: validate that the input value is a valid number
+                const celsius = (5/9) * (fahrenheit - 32);
+                resultEl.innerHTML = `${fahrenheit}&deg;F is ${celsius}&deg;C`;
+            });
+        </script>
+
+        <a href="./mainPage.html">go back</a>
+    </body>
+</html>
