@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     try {
         const response = await fetch(urlToGetId);
         if (response.ok) {
-            const comicId = await response.text(); // Предполагается, что это текстовый идентификатор
+            const comicId = await response.text(); 
             const queryParamsForComic = new URLSearchParams({ id: comicId });
             const urlToFetchComic = `https://fwd.innopolis.university/api/comic?${queryParamsForComic.toString()}`;
 
