@@ -17,7 +17,6 @@ const App: React.FC = () => {
                     <Route path="/" element={<MainContent />} />
                     <Route path="/comic" element={<ComicP />} />
                 </Routes></Router>
-            <MainContent />
             <Footer />
         </div>
     );
