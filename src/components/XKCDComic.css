@@ -1,0 +1,36 @@
+/* src/components/XKCDComic.css */
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#mainbl {
+    padding: 20px;
+}
+
+#comic-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#comimg {
+    max-width: 100%;
+    height: auto;
+}
+
+.button-back {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #000;
+}
+
+.button-back:hover {
+    background-color: #e0e0e0;
+}
