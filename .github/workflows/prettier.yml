@@ -1,0 +1,38 @@
+name: Prettier
+
+on:
+  push:
+    branches:
+      - hw5
+  pull_request:
+    branches:
+      - hw5
+
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run Prettier to check formatting
+      run: npm run format:check -- --write
+
+    - name: Commit changes
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git add .
+        git commit -m 'Format code with Prettier'
+        git push https://github-actions:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/iJeannne/IJeannne.github.io.git HEAD:hw5
+      env:
+        PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}

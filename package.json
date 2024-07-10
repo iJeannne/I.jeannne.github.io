@@ -1,0 +1,36 @@
+{
+    "name": "my-next-app",
+    "version": "0.1.0",
+    "type": "module",
+    "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start",
+      "lint": "eslint .",
+      "format": "prettier --write .",
+      "lint:fix": "eslint . --fix"
+    },
+    "dependencies": {
+      "next": "^14.2.4",
+      "react": "^18.3.1",
+      "react-dom": "^18.3.1"
+    },
+    "devDependencies": {
+      "@types/node": "20.14.10",
+      "@types/react": "18.3.3",
+      "eslint": "latest",
+      "prettier": "latest",
+      "typescript": "latest",
+      "eslint-plugin-react": "latest",
+      "eslint-plugin-react-hooks": "latest",
+      "eslint-plugin-jsx-a11y": "latest",
+      "eslint-plugin-import": "latest",
+      "@typescript-eslint/eslint-plugin": "latest",
+      "@typescript-eslint/parser": "latest",
+      "eslint-config-prettier": "latest",
+      "eslint-plugin-prettier": "latest",
+      "@eslint/eslintrc": "latest",
+      "@eslint/js": "latest"
+    }
+  }
+  
